@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'acbApp/base.html' %}
+{% load static %}
+{% block title%} completed project {% endblock %}
+{% block content %}
+
+<div class="card text-center">
+  <div class="card-header">
+    <h2>Completed Projects</h2>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Prestige – Lake Ridge, Uttarahalli, Bangalore South</h5>
+    <img src="{% static 'images/heading1.png' %}" class="d-block w-100">
+    <p class="card-text">Pic: Prestige – Lake Ridge</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+   <div class="card-body">
+    <h5 class="card-title">Assetz 63 Degree East, Sarjapur Road, Bangalore East</h5>
+    <img src="{% static 'images/heading2.png' %}" class="d-block w-100">
+    <p class="card-text">Pic: Assetz 63 Degree East</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+   <div class="card-body">
+    <h5 class="card-title">The Belvedere - Airport District byUKn Properties, Airport Road</h5>
+    <img src="{% static 'images/heading3.png' %}" class="d-block w-100">
+    <p class="card-text">Pic: The Belvedere - Airport District ByUKn Properties</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+   <div class="card-body">
+    <h5 class="card-title">Brigade Gem, Sarjapur Road, Bangalore East</h5>
+    <img src="{% static 'images/heading3a.png' %}" class="d-block w-100">
+    <p class="card-text">Pic: Brigade Gem</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+{% endblock %}

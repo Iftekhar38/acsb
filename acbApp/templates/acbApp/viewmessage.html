@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% extends 'acbApp/base.html' %}
+{% block title%} admin {% endblock %}
+
+{% block content %}
+
+<style>
+    #loginrow{
+    border: 2px solid black;
+    margin-top: 50px
+    margin-bottom: 50px;
+    margin-bottom:50px;
+    background-color: #82acbd;
+    }
+
+.row > div{
+    color: white;
+    padding: 5px;
+    font-size:15px;
+    font-family:Arial, Helvetica, sans-serif;
+    }
+
+#btn1{
+    float:right;
+    margin-top:20px;
+    margin-right:10px;
+
+    }
+
+</style>
+
+<a href="/admin/logout/"><button class="btn btn-danger" id="btn1">Logout</button></a>
+<br>
+<br>
+<div class="container" id="lgn" align="center">
+    <h1>Welcome Admin!..</h1>
+    {% if data %}
+
+<!--  <div class="row align-items-start text-wrap" id="loginrow">-->
+<!--      {% for data in data %}-->
+<!--      <div class="col-lg-1 col-sm-3">-->
+<!--        {{data.id}}-->
+<!--    </div>-->
+<!--    <div class="col-lg-2 col-sm-4">-->
+<!--        {{data.name}}-->
+<!--    </div>-->
+<!--    <div class="col-lg-2 col-sm-4">-->
+<!--      {{data.email}}-->
+<!--    </div>-->
+<!--    <div class="col-lg-1 col-sm-4">-->
+<!--      {{data.phone}}-->
+<!--    </div>-->
+<!--      <div class="col-lg-2 col-sm-4">-->
+<!--      {{data.address}}-->
+<!--    </div>-->
+<!--      <div class="col-lg-3 col-sm-4">-->
+<!--      {{data.message}}-->
+<!--    </div>-->
+<!--      <div class="col-lg-1 col-sm-4">-->
+<!--      <span class="bi bi-trash"></span>-->
+<!--    </div>-->
+<!--      {% endfor %}-->
+<!--  </div>-->
+    <table class="table table-primary table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile/Phone</th>
+            <th>Address</th>
+            <th>Message</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for data in data %}
+
+        <tr>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.phone}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.message}}</td>
+            <td><a href="/delete/{{data.id}}" onclick="sure()"><span class="bi bi-trash"></span></a></td>
+        </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {% else %}
+    <h2>No Data Found</h2>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,167 @@
+<!doctype html>
+{% load static %}
+<html lang="en" data-bs-theme="auto">
+  <head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>{% block title%} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <meta name="theme-color" content="#712cf9">
+<!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+<script src="{% static 'js/main.js' %}"></script>
+    <style>
+
+            .fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+  </head>
+  <body>
+
+<header data-bs-theme="dark">
+    <div class="container-fluid-xl">
+     <nav class="top-nav">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-auto">
+            <p>
+              <span class="bi bi-envelope"></span>
+              <span>info2iftekhar@gmail.com</span>
+            </p>
+            <p>
+              <span class="bi bi-phone"></span>
+              <span>+91 8377920892</span>
+            </p>
+          </div>
+          <div class="col-auto">
+            <div class="social-links">
+              <a href="https://www.facebook.com/"><span class="bi bi-facebook"></span></a>
+              <a href="https://x.com/"><span class="bi bi-twitter"></span></a>
+              <a href="https://www.instagram.com/"><span class="bi bi-instagram"></span></a>
+              <a href="https://in.linkedin.com/"><span class="bi bi-linkedin"></span></a>
+              <a href="https://www.youtube.com/"><span class="bi bi-youtube"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="d-flex justify-content-between align-items-center mt-1 mb-1" style="height:50px">
+      <img src="{% static 'images/acblogo.png' %}" width="150" height="50"  alt="logo">
+      <h5 class="text-info">Absolute Construction Services</h5>
+    </div>
+
+
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-warning" href="/"><h5>Absolute Construction Services</h5></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutus/">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact/">Contact Us</a>
+          </li>
+               <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Projects
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="/compro/">Completed Projects</a></li>
+            <li><a class="dropdown-item" href="/ongoingpro/">Ongoing Projects</a></li>
+          </ul>
+        </li>
+        </ul>
+
+          <div align="right">
+              <a href="/accounts/login/"><button class="btn btn-outline-warning">Login</button></a>
+          </div>
+
+      </div>
+    </div>
+  </nav>
+    </div>
+  </header>
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+<footer class="container-fluid text-white p-3" style="background-color: orangered; padding : 5px;">
+  <div class="d-flex justify-content-between">
+    <div>
+       Developed By Iftekhar
+      </div>
+
+      <div class="footer-span">
+      <span class="bi bi-phone ms-3"></span> <span class="me-3">+91-9019839193 – 7676255968 – 9958010166</span>
+      <span class="bi bi-envelope me-3"></span><span>absolutecs21@gmail.com</span>
+    </div>
+
+    <div><a href="#" class="text-white" >Back to top</a></div>
+  </div>
+  <div align="center" class="mt-2">
+        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://x.com/" class="fa fa-twitter"></a>
+        <a href="https://in.linkedin.com/" class="fa fa-linkedin"></a>
+      </div>
+  </footer>
+
+
+
+
+
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  </body>
+</html>

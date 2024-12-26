@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% extends 'acbApp/base.html' %}
+{% block title%} contactus {% endblock %}
+
+{% block content %}
+
+
+<div class="container-fluid bg-info w-100" style="height:150px; padding-top: 20px;">
+<p class="h1">Contact Us....</p>
+    <p class="h6">We’d love to hear from you! Whether you have a question, feedback,
+        or need assistance, our team is here to help.</p>
+</div>
+
+
+<div class="row mt-1">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body bg-primary text-white">
+        <h5 class="card-title"><span class="bi bi-house-add-fill"></span> Address</h5>
+        <p class="card-text">24/7, 3rd Floor, Pandrowala Manor, 6th Cross, Wheeler Road Extn. St. Thomas Town, Bengaluru - 560084</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card h-100">
+      <div class="card-body bg-success text-white">
+        <h5 class="card-title"><span class="bi bi-person-fill"></span> Contact Person</h5>
+        <p class="card-text">Mr. Ehtasham Reza</p>
+
+
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-3">
+    <div class="card h-100">
+      <div class="card-body bg-warning text-white">
+        <h5 class="card-title">Mobile No.</h5>
+        <p class="card-text"><span class="bi bi-phone"></span> 91-9019839193 – 7676255968 – 9958010166  </p>
+
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-3">
+    <div class="card h-100">
+      <div class="card-body bg-danger text-white">
+        <h5 class="card-title">Email Id</h5>
+        <p class="card-text"><span class="bi bi-envelope"></span> absolutecs21@gmail.com</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+    {% if msg %}
+    <div class="alert  alert-success alert-dismissible">
+        <p>{{msg}}</p>
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endif %}
+
+<br>
+<br>
+<div class="d-flex justify-content-center align-items-center">
+
+    <!--    <style>-->
+<!--    #ctn{-->
+<!--    border: 5px, solid, grey;-->
+<!--    border-radius: 15px 50px;-->
+<!--    width: 600px;-->
+<!--    height:100%-->
+<!--    padding: 10px;-->
+<!--    margin-top: 10px;-->
+<!--    display: block;-->
+
+
+<!--    }-->
+<!--</style>-->
+    <form class="border border-2 border-primary rounded-3 bg-light p-2" style="width:400px" action = '/feedback/' method="post">
+        <h2 align="center">Get in Touch!</h2>
+            <div class="form-group mb-3">
+                <input type="text" class="form-control" name="name" placeholder="Name" required>
+            </div>
+        <div class="form-group mb-3">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group mb-3">
+            <input type="number" class="form-control" name="phone" placeholder="Phone" required>
+        </div>
+        <div class="form-group mb-3">
+            <input type="text" class="form-control" name="address" placeholder="Address" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <textarea class="form-control" name="message" placeholder="Message" rows ="8"></textarea>
+        </div>
+                {% csrf_token %}
+                <button class="btn btn-primary w-100">Submit</button>
+    </form>
+
+
+
+        </div>
+
+
+<br>
+<style>
+    .google-map {
+     padding-top: 50%;
+     position: relative;
+     border: 1px, solid;
+}
+
+.google-map iframe {
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     position: absolute;
+}
+</style>
+<div class="container-fluid">
+<div class="google-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.458417513377!2d77.6231247741209!3d13.006453614115124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae171ee9f7de4b%3A0x465c4df81d9e0537!2sAbsolute%20Construction%20Services!5e0!3m2!1sen!2sin!4v1730542110176!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+    </div>
+
+{% endblock %}

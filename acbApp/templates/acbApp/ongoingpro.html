@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'acbApp/base.html' %}
+{% load static %}
+{% block title%} ongoing project {% endblock %}
+{% block content %}
+
+<div class="card text-center">
+  <div class="card-header">
+    <h2>OnGoing Projects</h2>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Assetz Leaves & Lives, Sarjapur Road, Bangalore East</h5>
+    <img src="{% static 'images/side1.jpg' %}" class="d-block w-100">
+    <p class="card-text">Pic: Assetz Leaves & Lives</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+   <div class="card-body">
+    <h5 class="card-title">Assetz Canvas & Cove, Hobli Bangalore</h5>
+    <img src="{% static 'images/side2.jpg' %}" class="d-block w-100">
+    <p class="card-text">Pic: Assetz Canvas & Cove</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+   <div class="card-body">
+    <h5 class="card-title">Godrej Splendour, Whitefield, Bengaluru</h5>
+    <img src="{% static 'images/side3.jpg' %}" class="d-block w-100">
+    <p class="card-text">Pic: Godrej Splendour </p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+
+</div>
+
+{% endblock %}

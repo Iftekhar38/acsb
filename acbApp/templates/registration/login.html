@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'acbApp/base.html' %}
+{% block title%} login {% endblock %}
+{% block content %}
+<style>
+    #lgn{
+    border: 5px, solid, grey;
+    width: 350px;
+    border-radius: 15px 50px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom:50px;
+    }
+</style>
+
+<div class="container bg-light" id="lgn" align="center">
+    <h1><span class="bi bi-person-fill">Login Page</span></h1>
+
+    <form method="post">
+        <table>
+        {{form.as_table}}
+        {% csrf_token %}
+        </table>
+        <br>
+        <button class="btn btn-success btn-lg" type="submit">Login</button>
+    </form>
+
+
+</div>
+{% endblock %}
